@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katik by Fahri Prasetya</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="title">
+        <h1><b>Welcome to Katik</b></h1>
+        <p>This website can help you calculate the area and perimeter of a triangle.</p>
+    </header>
+
+    <div class="segitiga">
+        <img src="assets/segitiga.jpg" alt="" class="segitiga-img">
+    </div>
+
+    <div class="select-rumus">
+        <label for="chooseRumus">
+            <h3>Select Rumus :</h3>
+        </label>
+
+        <select name="form-select" id="chooseRumus" class="" onchange="toggleInputs()">
+            <option value="luas">Luas Segitiga</option>
+            <option value="keliling">Keliling Segitiga</option>
+        </select>
+    </div>
+
+    <div id="formLuas">
+        <label for="input-alas" class="input">Masukan Alas Segitiga</label>
+        <input type="number" id="input-alas" class="kaltik-input">
+
+        <label for="input-tinggi" class="input">Masukan Tinggi Segitiga</label>
+        <input type="number" id="input-tinggi" class="kaltik-input">
+
+        <div id="bagianResultLuas">
+            <p id="rumusLuas"></p>
+            <p id="hitungLuas"></p>
+            <p id="resultLuas"></p>
+        </div>
+    </div>
+
+    <div id="formKeliling">
+        <label for="sideA" class="input">Masukan Sisi 1</label>
+        <input type="number" id="sideA" class="kaltik-input">
+
+        <label for="sideB" class="input">Masukan Sisi 2</label>
+        <input type="number" id="sideB" class="kaltik-input">
+
+        <label for="sideC" class="input">Masukan Sisi 3</label>
+        <input type="number" id="sideC" class="kaltik-input">
+
+        <div id="bagianResultKeliling">
+            <p id="rumusKeliling"></p>
+            <p id="hitungKeliling"></p>
+            <p id="resultKeliling"></p>
+        </div>
+    </div>
+
+
+    <div class="buttons">
+        <button onclick="hitung()">Hitung</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
